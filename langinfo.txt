@@ -1,0 +1,7 @@
+1. C Like syntax
+2. Pure functions defined using func keyword
+3. Both dynamic and static 
+
+Dynamic keywords: var, func, dynamic (function to get dynamic value from a static value)
+Static: str, int, void, float, map (dictionary which holds strings and ints), arr, num (a big number which can be a float/int), set (unorded array with no similar numbers)
+General keywords: del (delete an object/struct from the program), end (stop the current function), ret (return a value from a function) 

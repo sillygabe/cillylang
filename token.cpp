@@ -73,10 +73,12 @@ public:
 
         Token CurrentTok;
         char Current;
+        char* CurrentText = (char *) malloc(0);
+
         for (int i = 0; i < FileSize; i++)
         {
             Current = Text[i]; 
-
+            
         }
 
     }
