@@ -13,6 +13,7 @@
 #include <exception>
 #include <string>
 #include <vector>
+#include <algorithm>
 #pragma once
 
 using token = std::pair<int, std::string>;
@@ -34,3 +35,8 @@ enum token_types
     TOKEN_OPER_MOD = 10, // %
     TOKEN_OPER_TOFORCE = 11 // ^
 };
+
+size_t count_chars(const std::string& s, char elem)
+{
+    return std::count(s.begin(), s.end(), elem);
+}

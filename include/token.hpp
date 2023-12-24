@@ -12,6 +12,8 @@
 #include <fstream>
 
 //Get token from string
+//TODO: Count the amount of special characters in floats/ints
+//Use count_chars from shared.hpp:39:42
 bool is_int(const std::string& s)
 {
     return s.find_first_not_of("-0123456789") == std::string::npos;
@@ -48,6 +50,7 @@ int get_token(const std::string& s)
     return token_types::TOKEN_NULL;
 }
 
+//TODO: Give it an ability to read array literals; no (file >> str) basically
 std::vector<token> get_tokens(const char * path)
 {
     std::fstream file;
