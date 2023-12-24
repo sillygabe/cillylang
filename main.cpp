@@ -11,9 +11,19 @@
 #include "include/llvm_ir.hpp"
 #include "include/token.hpp"
 
-int main()
+int main(int argc, char **argv)
 {
-    //TODO
+    if (argc < 2)
+    {
+        throw std::runtime_error("No input file");
+    }
+
+    auto tokens = get_tokens(argv[1]);
+    for (auto tok : tokens)
+    {
+        printf("TYPE: %d, DATA: %s\n", tok.first, tok.second.c_str());
+    }
+
     return 0;
 }
 

@@ -8,10 +8,8 @@
 //  This file is a part of the Cilly project
 //  Made by Dudin Elisey 
 
-#include "types.hpp"
+#include "shared.hpp"
 #include <fstream>
-#include <iostream>
-#include <vector>
 
 //Get token from string
 bool is_int(const std::string& s)
@@ -29,10 +27,15 @@ bool is_str(const std::string& s)
     return s[0] == '"' && s.back() == '"';
 }
 
+bool is_bool(const std::string& s)
+{
+    return s == "true" || s == "false";
+}
+
 int identify_keyword(const std::string& s)
 {
     //TODO
-    return NULL;
+    return 0;
 }
 
 int get_token(const std::string& s)
@@ -40,6 +43,7 @@ int get_token(const std::string& s)
     if (is_int(s)) return token_types::TOKEN_INT_REPR;
     if (is_float(s)) return token_types::TOKEN_FLT_REPR;
     if (is_str(s)) return token_types::TOKEN_STR_REPR;
+    if (is_bool(s)) return token_types::TOKEN_BOOL_REPR;
 
     return token_types::TOKEN_NULL;
 }
